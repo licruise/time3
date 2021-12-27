@@ -1,0 +1,50 @@
+body {
+	background-color: black;
+	width: 100%;	
+}
+
+#first {
+	border-color: white; 
+	text-align: center;
+	background-color: yellow;
+	width: 60%;
+	height: 20vh;
+	margin-left: 20%;
+	margin-top: 10%; 
+}
+
+#second {
+	background-color: grey;
+	color: black;
+	font-family: Arial;
+	font-size: 100%;
+
+}
+
+.clicks {
+	background-color: grey;
+}
+#third {
+	text-align: center;
+}
+
+.hi {
+	border-color: red;
+	background-color: black;
+	color: white;
+	width: 50%;
+}
+
+.si {
+	border-color: yellow;
+	background-color: green;
+	color: white;
+	width: 50%;
+}
+
+.mi {
+	border-color: red;
+	background-color: black;
+	color: white;
+	width: 50%;
+}

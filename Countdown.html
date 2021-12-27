@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Countdown</title>
+	<link rel="stylesheet" type="text/css" href="countdown.css">
+	<script>
+var s,m,h;
+
+var a = new Audio('J.mp3')
+
+function count(){
+	s = seconds.value;
+	m = minutes.value;
+	h = hours.value;
+
+	if(h > 0 && m == 0 && s==0){
+		minutes.value = 60;
+		m = minutes.value;
+		h--;
+		hours.value = h;
+	}
+
+	if(s == 0 && m > 0 && m <= 60){
+		seconds.value = 60;
+		s = seconds.value;
+		m--;
+		minutes.value = m;
+	}
+
+	if(s > 0 && s<= 60){
+	s--;
+	seconds.value = s;
+	setTimeout(count, 1000);
+	}
+
+	else{
+		alert('Time Up!!!')
+		a.play();
+	}
+}
+function snooze(){
+	a.pause();
+	minutes.value = 10;
+	count();
+}
+
+	</script>
+</head>
+<body>
+<table id="first">
+	<tr id="second">
+		<th>Hour</th>
+		<th colspan="3">Minutes</th>
+		<th>Seconds</th>
+	</tr>
+	<tr id="third"><td><input type="text" name="hour" id="hours" placeholder="00"></td><br>
+	<td class="col">:</td>
+    <td><input type="text" name="mintues" id="minutes" placeholder="00"></td><br>
+    <td class="col">:</td>
+	<td><input type="text" name="seconds" id="seconds" placeholder="00"></td>
+	</tr>
+	<tr class="clicks">
+		<td><button class="hi">Refresh</button></td></a>
+		<td colspan="3"><button class="si" onclick="count()">Start</button></td>
+		<td><button class="mi"ss onclick="snooze()">Snooze</button></td>
+	</tr>
+</fieldset>
+</table>
+</body>
+</html>
